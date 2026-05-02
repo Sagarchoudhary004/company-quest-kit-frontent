@@ -8,6 +8,10 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: [
+     "company-quest-kit-frontent.onrender.com",
+     "company-quest-kit-backend-2.onrender.com",
+    ],
     proxy: {
       "/api": {
         target: process.env.VITE_API_URL,
